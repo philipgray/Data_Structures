@@ -17,46 +17,36 @@ public class Test{
 
     //This tests adding and removing in different locations
     //It also tests reversing the list
-    public static void testComplex(ComplexLinked lst){
-	lst.append('x');
-	lst.append('b');
-	boolean removed = lst.remove('x');
-	if(removed){
-	    System.out.println("Successfully removed an X");
-	}
+    public static void testComplex(ComplexLinked lst) {
+		System.out.println("This should print banana");
+		lst.print();
 
-	lst.append('a');
-	lst.append('a');
-	lst.append('a');
+		lst.insert(0, 'e');
+		lst.insert(1, 'g');
+		lst.insert(2, 'g');
+		lst.print();
 
-	lst.insert(1, 'n');
-	lst.insert(3, 'n');
-	lst.insert(5, 'n');
-	removed = lst.remove('n');
-	if(removed){
-	    System.out.println("Successfully removed an X");
-	}
+		lst.remove('b');
+		lst.remove('a');
+		lst.remove('n');
+		lst.remove('a');
+		lst.remove('a');
+		lst.remove('n');
 
-	lst.append('x');
-	removed = lst.remove('x');
-	if(removed){
-	    System.out.println("Successfully removed an X");
-	}
-	removed = lst.remove('x');
-	if(removed){
-	    System.out.println("Error ... This remove should have failed!");
-	}
-	
-	System.out.println("This should print banana:");
-	lst.print();
-
+		lst.print();
 	System.out.println("This should print ananab:");
 	ComplexLinked new_lst = lst.reverse();
 	lst.remove('n');
 	lst.remove('n');
 	new_lst.print();
+
+	new_lst.append('z');
+	new_lst.append('q');
+
+	ComplexLinked new_lst3 = new_lst.reverse();
+	new_lst3.print();
     }
-    
+
     public static void main(String[] args){
 	SimpleLinked simple = new SimpleLinked();
 	ComplexLinked complex = new ComplexLinked();

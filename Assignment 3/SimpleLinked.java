@@ -1,6 +1,5 @@
 //This class stores  a Linked List of characters
 
-
 public class SimpleLinked{
     Node start;
     int len;
@@ -21,7 +20,7 @@ public class SimpleLinked{
 	    while(current.getNext() != null){
 		current = current.getNext();
 	    }
-	    current.setNext( new Node(c) );
+	    current.setNext(new Node(c, current));
 	}
 	len = len + 1;
     }
