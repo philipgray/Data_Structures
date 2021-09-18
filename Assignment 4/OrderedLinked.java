@@ -88,4 +88,49 @@ public class OrderedLinked <T extends Comparable> extends DoubleLinked {
         }
         return didWeRemove;
     }
+
+    public void removeFirst() {
+        if (start != null) {
+            if (start.getNext() != null) {
+                // if there is more than one item in the list
+                start = start.getNext();
+                start.setPrevious(null);
+            } else {
+                // if there is only one item in the list
+                start = null;
+            }
+        }
+    }
+
+    public void removeLast() {
+        if (end != null) {
+            if (end.getPrevious() != null) {
+                // if there is more than one item in the list
+                end = end.getPrevious();
+                end.setNext(null);
+            } else {
+                // if there is only one item in the list
+                end = null;
+            }
+        }
+    }
+
+    public boolean search(T newData) {
+        DNode current = start;
+        boolean didWeFind = false;
+        if (current != null) {
+            while (newData.compareTo(current.getData()) != 0) {
+                if (current.getNext() != null) {
+                    current = current.getNext();
+                } else {
+                    // if we run out of items to compare to
+                    break;
+                }
+            }
+            if (newData.compareTo(current.getData()) == 0) {
+                didWeFind = true;
+            }
+        }
+        return didWeFind;
+    }
 }
