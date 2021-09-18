@@ -5,8 +5,8 @@ public class OrderedLinked <T extends Comparable> extends DoubleLinked {
             end = start;
         } else {
             DNode current = start;
-            System.out.println("New Data:" + newData+"\nCurrent: "+current.getData());
-            System.out.println(newData.compareTo(current.getData()));
+            // System.out.println("New Data:" + newData+"\nCurrent: "+current.getData());
+            // System.out.println(newData.compareTo(current.getData()));
 
             if (newData.compareTo(current.getData()) <= 0) {
                 // if our newData is less than current or equal to
