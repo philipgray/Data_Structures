@@ -5,6 +5,7 @@ public class testingClass {
         testInserting.insert(5);
         testInserting.insert(11);
         testInserting.insert(1);
+        testInserting.insert(2);
 
         testInserting.print();
     }
