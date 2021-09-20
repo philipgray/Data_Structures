@@ -8,7 +8,7 @@ public class OrderedLinked <T extends Comparable> extends DoubleLinked {
             // System.out.println("New Data:" + newData+"\nCurrent: "+current.getData());
             // System.out.println(newData.compareTo(current.getData()));
 
-            if (newData.compareTo(current.getData()) <= 0) {
+            if (newData.compareTo(current.getData()) < 0) {
                 // if our newData is less than current or equal to
                 if (current.getPrevious() == null) {
                     // if newData is less or equal to than the first item in our list
@@ -25,10 +25,13 @@ public class OrderedLinked <T extends Comparable> extends DoubleLinked {
             } else {
                 while (newData.compareTo(current.getData()) > 0) {
                     // looping until our item is no longer greater than
+                    System.out.println(newData.compareTo(current.getData()));
+                    System.out.println("test1");
                     if (current.getNext() != null) {
                         current = current.getNext();
                     } else {
                         // we've reached the end of our list with nothing greater than
+                        System.out.println("test");
                         break; // maybe bad practice?
                     }
                 }
@@ -37,6 +40,7 @@ public class OrderedLinked <T extends Comparable> extends DoubleLinked {
                     end = current.getNext();
                     len++;
                 } else {
+                    System.out.println("am I in here?");
                     DNode next = current.getNext();
                     current.setNext(new DNode(newData, current, next));
                     next.setPrevious(current.getNext());
