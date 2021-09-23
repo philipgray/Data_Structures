@@ -21,7 +21,7 @@ public class DoubleLinked<T extends Comparable>{
             start = end;
         }
         else{
-            DNode new_node = new DNode<T>(the_data);
+            DNode new_node = new DNode(the_data);
             DNode old_end = end;
 
             new_node.setPrevious(old_end);
@@ -38,7 +38,7 @@ public class DoubleLinked<T extends Comparable>{
 
     //Prints the contents of the list
     public void print(){
-        DNode<T> current = start;
+        DNode current = start;
         String to_print = "";
 
         while(current != null){
@@ -50,7 +50,7 @@ public class DoubleLinked<T extends Comparable>{
     }
 
     public void printBackwards(){
-        DNode<T> current = end;
+        DNode current = end;
         String to_print = "";
 
         while(current != null){
