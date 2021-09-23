@@ -1,3 +1,7 @@
+/**
+ * @author Philip Gray
+ */
+
 public class TestOrderedLinked <T extends Comparable> {
     OrderedLinked<T> OrderedLinkedList;
 

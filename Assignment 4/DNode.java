@@ -1,5 +1,9 @@
-//This class represents a node in a Linked List
-//The class holds one character of data
+/**
+ * This class represents a node in a Linked List
+ * The class holds one character of data
+ * @author Professor Lepinski
+ * @author Philip Gray
+ */
 
 public class DNode<T extends Comparable>{
     private T data;

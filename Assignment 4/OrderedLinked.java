@@ -1,6 +1,8 @@
+/**
+ * @author Philip Gray
+ */
 public class OrderedLinked <T extends Comparable> extends DoubleLinked {
     public void insert(T newData) {
-
         if (this.start == null) {
             start = new DNode(newData);
             end = start;
@@ -24,7 +26,7 @@ public class OrderedLinked <T extends Comparable> extends DoubleLinked {
                     len++;
                     operationIncomplete = false;
                 } else if (current.getNext() == null) {
-                    current.setNext(new DNode(newData, current, null));
+                    current.setNext(new DNode(newData, current));
                     end = current.getNext();
                     len++;
                 } else {
