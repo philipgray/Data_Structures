@@ -228,13 +228,11 @@ public abstract class TreeUtilities{
         }
 
         helpVisualize(tree);
-        //System.out.println(getNextInt(tree, 5));
-        if (tree.search(5)) {
-            tree.insert(5);
-        } else {
-            tree.insert(5);
-            tree.insert(5);
-        }
+        System.out.println(getNextInt(tree, 5));
+
+        /*
+         * This is for testing if there's two targets and nothing less than it.
+         *
         IntSearchTree doubleValTest = new IntSearchTree();
         doubleValTest.insert(4);
         doubleValTest.insert(5);
@@ -242,5 +240,6 @@ public abstract class TreeUtilities{
         System.out.println(getNextInt(doubleValTest, 5));
 
         //System.out.println(getNextInt(tree, 5));
+         */
     }
 }
