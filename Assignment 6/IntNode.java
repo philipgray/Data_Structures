@@ -84,12 +84,7 @@ public class IntNode{
     }
 
     public boolean isLeaf(){
-        if ( (left == null) && (right == null) ){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return (left == null) && (right == null);
     }
 
     //Constructor
