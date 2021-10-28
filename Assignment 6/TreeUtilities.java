@@ -176,12 +176,12 @@ public abstract class TreeUtilities{
             }
             if (maxValue == target) {
                 assert targetNode != null;
-                System.out.println("inside max == target");
+                //System.out.println("inside max == target");
                 if (targetNode.getRight() != null) {
                     if (targetNode.getRight().getData() == target) {
                         return target;
                     } else {
-                        System.out.println("not sure how we got here");
+                        //System.out.println("not sure how we got here");
                         throw new RuntimeException();
                     }
                 } else {
@@ -228,6 +228,19 @@ public abstract class TreeUtilities{
         }
 
         helpVisualize(tree);
-        System.out.println(getNextInt(tree, 5));
+        //System.out.println(getNextInt(tree, 5));
+        if (tree.search(5)) {
+            tree.insert(5);
+        } else {
+            tree.insert(5);
+            tree.insert(5);
+        }
+        IntSearchTree doubleValTest = new IntSearchTree();
+        doubleValTest.insert(4);
+        doubleValTest.insert(5);
+        doubleValTest.insert(5);
+        System.out.println(getNextInt(doubleValTest, 5));
+
+        //System.out.println(getNextInt(tree, 5));
     }
 }
